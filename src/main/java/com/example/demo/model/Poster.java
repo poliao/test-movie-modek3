@@ -2,6 +2,8 @@ package com.example.demo.model;
 
 import java.time.LocalDateTime;
 
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,8 +21,10 @@ public class Poster {
     private String imgPoster;
     private String detail;
     private String nameMovie;
-    private LocalDateTime showtime;
-    
+    private LocalDateTime showtime; //วันที่ฉาย
+    private String category;
+    private String Audiencerating; //เรทผู้ชม
+    private String Director;
 
     // constructors, getters, setters
 }
