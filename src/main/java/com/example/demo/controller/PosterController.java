@@ -7,7 +7,7 @@ import com.example.demo.model.Poster;
 import com.example.demo.repository.PosterRepository;
 
 import java.util.List;
-
+@CrossOrigin(origins = "http://localhost:8081")
 @RestController
 @RequestMapping("/posters")
 public class PosterController {
