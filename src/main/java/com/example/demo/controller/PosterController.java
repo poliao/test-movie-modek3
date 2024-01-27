@@ -21,7 +21,7 @@ public class PosterController {
     }
 
     @GetMapping("/{id}")
-    public Poster getPosterById(@PathVariable Long id) {
+    public Poster getPosterById(@PathVariable(name = "id") Long id) {
         return posterRepository.findById(id).orElse(null);
     }
 
@@ -31,13 +31,16 @@ public class PosterController {
     }
 
     @PutMapping("/{id}")
-    public Poster updatePoster(@PathVariable Long id, @RequestBody Poster poster) {
+    public Poster updatePoster(@PathVariable(name = "id") Long id, @RequestBody Poster poster) {
         poster.setId(id);
         return posterRepository.save(poster);
     }
 
+
     @DeleteMapping("/{id}")
-    public void deletePoster(@PathVariable Long id) {
+    public void deletePoster(@PathVariable(name = "id") Long id) {
         posterRepository.deleteById(id);
     }
+
+    
 }
