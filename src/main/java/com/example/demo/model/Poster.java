@@ -25,6 +25,7 @@ public class Poster {
     private String category;
     private String Audiencerating; //เรทผู้ชม
     private String Director;
+    private Long time;
 
     // constructors, getters, setters
 }
