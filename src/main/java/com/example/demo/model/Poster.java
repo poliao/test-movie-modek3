@@ -22,7 +22,7 @@ public class Poster {
     private String detail;
     private String nameMovie;
     private LocalDateTime showtime; //วันที่ฉาย
-    private String category;
+    private String catagory;
     private String Audiencerating; //เรทผู้ชม
     private String Director;
     private Long time;
