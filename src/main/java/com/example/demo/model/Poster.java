@@ -2,8 +2,7 @@ package com.example.demo.model;
 
 import java.time.LocalDateTime;
 
-
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,6 +18,8 @@ public class Poster {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String imgPoster;
+    
+    @Column(length = 10000)
     private String detail;
     private String nameMovie;
     private LocalDateTime showtime; //วันที่ฉาย
