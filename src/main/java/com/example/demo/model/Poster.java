@@ -18,11 +18,12 @@ public class Poster {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String imgPoster;
-    
+    private String backgroundPoster;
     @Column(length = 10000)
     private String detail;
     private String nameMovie;
-    private LocalDateTime showtime; //วันที่ฉาย
+    private LocalDateTime showtime;
+    private LocalDateTime endtime; //วันที่ฉาย
     private String catagory;
     private String Audiencerating; //เรทผู้ชม
     private String Director;

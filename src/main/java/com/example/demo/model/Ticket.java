@@ -15,6 +15,7 @@ public class Ticket {
     private Long id;
     private String ticketNumber;
     private String movieName;
+    private Long idcustomer;
     private String customerName;
     private String seatNumber;
 }
