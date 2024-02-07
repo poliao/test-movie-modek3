@@ -9,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
+import java.util.List;
 
 @Entity
 @Data
@@ -27,7 +28,7 @@ public class Poster {
     private String catagory;
     private String Audiencerating; //เรทผู้ชม
     private String Director;
-    private Long time;
+    private List<Long> time;
 
     // constructors, getters, setters
 }
