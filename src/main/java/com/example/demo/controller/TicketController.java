@@ -31,22 +31,11 @@ public class TicketController {
     }
 
     @PutMapping("/{id}")
-    public Ticket updateTicket(@PathVariable Long id, @RequestBody Ticket updatedTicket) {
-        return ticketRepository.findById(id)
-                .map(ticket -> {
-                    // Update fields as needed
-                    ticket.setTicketNumber(updatedTicket.getTicketNumber());
-                    ticket.setMovieName(updatedTicket.getMovieName());
-                    ticket.setCustomerName(updatedTicket.getCustomerName());
-                    ticket.setSeatNumber(updatedTicket.getSeatNumber());
-                    // Update more fields as needed
-                    return ticketRepository.save(ticket);
-                })
-                .orElseGet(() -> {
-                    updatedTicket.setId(id);
-                    return ticketRepository.save(updatedTicket);
-                });
+    public Ticket updatePoster(@PathVariable(name = "id") Long id, @RequestBody Ticket ticket) {
+        ticket.setId(id);
+        return ticketRepository.save(ticket);
     }
+    
 
     @DeleteMapping("/{id}")
     public void deleteTicket(@PathVariable Long id) {
