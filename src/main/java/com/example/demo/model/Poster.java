@@ -29,6 +29,7 @@ public class Poster {
     private String Audiencerating; //เรทผู้ชม
     private String Director;
     private List<Long> time;
+    private List<String> Projcetionroom;
 
     // constructors, getters, setters
 }
