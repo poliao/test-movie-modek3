@@ -1,6 +1,5 @@
 package com.example.demo.model;
 
-import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,12 +22,13 @@ public class Poster {
     @Column(length = 10000)
     private String detail;
     private String nameMovie;
-    private LocalDateTime showtime;
-    private LocalDateTime endtime; //วันที่ฉาย
+    private String showtime;
+    private String endtime; //วันที่ฉาย
     private String catagory;
     private String Audiencerating; //เรทผู้ชม
     private String Director;
-    private List<Long> time;
+    private List<String> time;
+    private String Logtime; //ระยะเวลา
     private List<String> Projcetionroom;
 
     // constructors, getters, setters
