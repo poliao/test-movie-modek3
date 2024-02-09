@@ -4,8 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
 import lombok.Data;
 import java.time.LocalTime;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -19,4 +21,17 @@ public class Ticket {
     private String customerName;
     private String seatNumber;
     private LocalTime showtime;
+
+   
+    private LocalDate date;
+
+    @PrePersist
+    protected void onCreate() {
+        date = LocalDate.now();
+    }
+
+  
+
+    
+
 }

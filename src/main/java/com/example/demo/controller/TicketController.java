@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @CrossOrigin(origins = "http://localhost:8081")
 @RestController
@@ -22,8 +21,8 @@ public class TicketController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Ticket> getTicketById(@PathVariable Long id) {
-        return ticketRepository.findById(id);
+    public Ticket getTicketById(@PathVariable(name = "id") Long id) {
+        return ticketRepository.findById(id).orElse(null);
     }
 
     @PostMapping
@@ -39,7 +38,7 @@ public class TicketController {
     
 
     @DeleteMapping("/{id}")
-    public void deleteTicket(@PathVariable Long id) {
+    public void deleteTicket(@PathVariable(name = "id") Long id) {
         ticketRepository.deleteById(id);
     }
 }
