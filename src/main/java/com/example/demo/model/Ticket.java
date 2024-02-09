@@ -8,7 +8,7 @@ import jakarta.persistence.PrePersist;
 import lombok.Data;
 import java.time.LocalTime;
 import java.time.LocalDate;
-import java.util.List;
+
 
 @Entity
 @Data
@@ -22,8 +22,8 @@ public class Ticket {
     private String customerName;
     private String seatNumber;
     private LocalTime showtime;
-    private List<String> Projcetionroom;
-    private Long phonenumber;
+    private String Projcetionroom;
+    private String phonenumber;
     private String email;
     
    
