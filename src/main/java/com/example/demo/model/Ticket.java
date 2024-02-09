@@ -24,7 +24,7 @@ public class Ticket {
     private LocalTime showtime;
     private List<String> Projcetionroom;
     private Long phonenumber;
-    private String emsil;
+    private String email;
     
    
     private LocalDate date;
