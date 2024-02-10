@@ -1,15 +1,14 @@
 package com.example.demo.controller;
-
 import com.example.demo.model.Person;
+
 import com.example.demo.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:8081")
 @RestController
-@RequestMapping("/tickets")
+@RequestMapping("/Person")
 public class PersonController {
 
     @Autowired
@@ -21,12 +20,12 @@ public class PersonController {
     }
 
     @GetMapping("/{id}")
-    public Person getTicketById(@PathVariable(name = "id") Long id) {
+    public Person getPersonById(@PathVariable(name = "id") Long id) {
         return personRepository.findById(id).orElse(null);
     }
 
     @PostMapping
-    public Person createTicket(@RequestBody Person person) {
+    public Person createPerson(@RequestBody Person person) {
         return personRepository.save(person);
     }
 
@@ -38,7 +37,7 @@ public class PersonController {
     
 
     @DeleteMapping("/{id}")
-    public void deleteTicket(@PathVariable(name = "id") Long id) {
+    public void deletePerson(@PathVariable(name = "id") Long id) {
         personRepository.deleteById(id);
     }
 }
